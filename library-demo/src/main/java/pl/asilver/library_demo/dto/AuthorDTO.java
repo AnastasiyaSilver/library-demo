@@ -1,15 +1,18 @@
-package dto;
+package pl.asilver.library_demo.dto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-public class BookDTO {
+public class AuthorDTO {
     private Long id;
     private String name;
-    private String genre;
+    private String surname;
+    private List<BookDTO> books;
 }

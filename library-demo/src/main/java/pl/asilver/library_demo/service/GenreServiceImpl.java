@@ -1,13 +1,13 @@
-package service;
+package pl.asilver.library_demo.service;
 
-import dto.AuthorDTO;
-import dto.BookWithAuthorDTO;
-import dto.GenreDTO;
+import pl.asilver.library_demo.dto.AuthorDTO;
+import pl.asilver.library_demo.dto.BookWithAuthorDTO;
+import pl.asilver.library_demo.dto.GenreDTO;
 import lombok.RequiredArgsConstructor;
-import model.Genre;
+import pl.asilver.library_demo.model.Genre;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import repository.GenreRepository;
+import pl.asilver.library_demo.repository.GenreRepository;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -16,18 +16,12 @@ import java.util.logging.Logger;
 @RequiredArgsConstructor
 public class GenreServiceImpl implements GenreService {
     private final GenreRepository genreRepository;
-    private static final Logger logger = (Logger) LoggerFactory.getLogger(GenreServiceImpl.class);
 
-    @Override
     public GenreDTO getGenreById(Long id) {
-        logger.info("Fetching genre with id: {}");
-        Genre genre = genreRepository.findById(id).orElseThrow(() -> {
-            logger.info("Genre not found with id: {}");
-            return new RuntimeException("Genre not found");
-        });
-        logger.info("Found genre: {}");
+        Genre genre = genreRepository.findById(id).orElseThrow();
         return convertToDto(genre);
     }
+
 
     private GenreDTO convertToDto(Genre genre) {
         List<BookWithAuthorDTO> bookDtoList = genre.getBooks()

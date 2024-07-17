@@ -1,10 +1,11 @@
-package service;
+package pl.asilver.library_demo.controller;
 
-import dto.GenreDTO;
+import pl.asilver.library_demo.dto.GenreDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import pl.asilver.library_demo.service.GenreService;
 
 @RestController
 @RequiredArgsConstructor

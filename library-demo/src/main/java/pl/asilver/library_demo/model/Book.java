@@ -1,4 +1,4 @@
-package model;
+package pl.asilver.library_demo.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

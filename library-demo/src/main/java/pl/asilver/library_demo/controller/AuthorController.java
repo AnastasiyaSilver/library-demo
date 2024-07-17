@@ -1,11 +1,11 @@
-package service;
+package pl.asilver.library_demo.controller;
 
-import dto.AuthorDTO;
-import lombok.Data;
+import pl.asilver.library_demo.dto.AuthorDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import pl.asilver.library_demo.service.AuthorService;
 
 @RestController
 @RequiredArgsConstructor

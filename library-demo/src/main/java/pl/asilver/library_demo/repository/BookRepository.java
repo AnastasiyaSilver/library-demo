@@ -1,6 +1,6 @@
-package repository;
+package pl.asilver.library_demo.repository;
 
-import model.Book;
+import pl.asilver.library_demo.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookRepository extends JpaRepository<Book, Long> {

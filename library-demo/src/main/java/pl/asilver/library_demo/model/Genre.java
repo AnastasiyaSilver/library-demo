@@ -1,10 +1,11 @@
-package model;
+package pl.asilver.library_demo.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import pl.asilver.library_demo.model.Book;
 
 import java.util.Set;
 

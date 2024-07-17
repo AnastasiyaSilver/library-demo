@@ -1,10 +1,10 @@
-package service;
-import dto.AuthorDTO;
-import dto.BookDTO;
+package pl.asilver.library_demo.service;
+import pl.asilver.library_demo.dto.AuthorDTO;
+import pl.asilver.library_demo.dto.BookDTO;
 import lombok.RequiredArgsConstructor;
-import model.Author;
+import pl.asilver.library_demo.model.Author;
 import org.springframework.stereotype.Service;
-import repository.AuthorRepository;
+import pl.asilver.library_demo.repository.AuthorRepository;
 
 import java.util.List;
 
