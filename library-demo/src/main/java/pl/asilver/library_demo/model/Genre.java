@@ -22,6 +22,7 @@ public class Genre {
     @Column(nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "genre")
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "genre_id")
     private Set<Book> books;
 }

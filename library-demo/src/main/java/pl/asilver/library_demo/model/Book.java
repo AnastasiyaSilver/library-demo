@@ -1,4 +1,5 @@
 package pl.asilver.library_demo.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,5 +30,6 @@ public class Book {
             name = "author_book",
             inverseJoinColumns = @JoinColumn(name = "author_id", referencedColumnName = "id"),
             joinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id"))
+    @JsonIgnore
     private Set<Author> authors;
 }

@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.asilver.library_demo.dto.BookWithAuthorDTO;
 
 import java.util.List;
 
@@ -15,5 +14,5 @@ import java.util.List;
 public class GenreDTO {
     private Long id;
     private String name;
-    private List<BookWithAuthorDTO> authors;
+    private List<BookDTO> books;
 }
