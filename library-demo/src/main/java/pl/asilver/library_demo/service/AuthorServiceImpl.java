@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import pl.asilver.library_demo.repository.AuthorRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -117,5 +118,10 @@ public class AuthorServiceImpl implements AuthorService{
                 .books(bookDtoList)
                 .build();
         return authorDto;
+    }
+
+    public List<AuthorDTO> getAllAuthors(){
+        List<Author> authors = authorRepository.findAll();
+        return authors.stream().map(this::convertEntityToDTO).collect(Collectors.toList());
     }
 }

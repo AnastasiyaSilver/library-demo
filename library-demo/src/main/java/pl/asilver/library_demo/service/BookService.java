@@ -5,6 +5,8 @@ import pl.asilver.library_demo.dto.BookCreateDTO;
 import pl.asilver.library_demo.dto.BookDTO;
 import pl.asilver.library_demo.dto.BookUpdateDTO;
 
+import java.util.List;
+
 public interface BookService {
     BookDTO getByNameV1(String name);
 
@@ -16,4 +18,6 @@ public interface BookService {
 
     BookDTO updateBook(BookUpdateDTO bookUpdateDTO);
     void deleteBook(Long id);
+
+    List<BookDTO> getAllBooks();
 }

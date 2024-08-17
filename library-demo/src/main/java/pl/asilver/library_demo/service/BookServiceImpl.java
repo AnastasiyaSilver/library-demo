@@ -21,6 +21,7 @@ import pl.asilver.library_demo.repository.GenreRepository;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -114,5 +115,11 @@ public class BookServiceImpl implements BookService{
                 .genre(genre)
                 .authors(authors)
                 .build();
+    }
+
+    @Override
+    public List<BookDTO> getAllBooks() {
+        List<Book> books = bookRepository.findAll();
+        return books.stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 }

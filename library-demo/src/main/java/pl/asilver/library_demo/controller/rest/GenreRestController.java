@@ -1,4 +1,4 @@
-package pl.asilver.library_demo.controller;
+package pl.asilver.library_demo.controller.rest;
 
 import pl.asilver.library_demo.dto.GenreDTO;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +9,7 @@ import pl.asilver.library_demo.service.GenreService;
 
 @RestController
 @RequiredArgsConstructor
-public class GenreController {
+public class GenreRestController {
 
     private final GenreService genreService;
 

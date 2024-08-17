@@ -5,6 +5,8 @@ import pl.asilver.library_demo.dto.AuthorDTO;
 import pl.asilver.library_demo.dto.AuthorUpdateDTO;
 import pl.asilver.library_demo.model.Author;
 
+import java.util.List;
+
 public interface AuthorService {
     AuthorDTO getAuthorById(Long id);
 
@@ -19,4 +21,6 @@ public interface AuthorService {
     AuthorDTO updateAuthor(AuthorUpdateDTO authorUpdateDTO);
 
     void deleteAuthor(Long id);
+
+    List<AuthorDTO> getAllAuthors();
 }
